@@ -26,18 +26,18 @@ play_again = "yes"
 while play_again == "yes":
     print("\nWelcome to Treasure Island.")
     print("Your mission is to find the treasure.")
-    choice1 = input('''You're at a crossroad, where do you want to go?\nType "left" or "right".''').lower()
+    choice1 = input('You\'re at a crossroad, where do you want to go?\nType "left" or "right".\n').lower()
 
     if choice1 == "left":
         # Continue in Game
         choice2 = input('You\'ve come to a lake. There is an island in the middle of the lake. '
-                     'Type "wait" to wait for a boat. Type "swim" to swim across.').lower()
+                        'Type "wait" to wait for a boat. Type "swim" to swim across.\n').lower()
         if choice2 == "wait":
             # game will continue
             choice3 = input('You arrive at the island unharmed. '
                             'There is a house with 3 doors. '
                             'One red, one yellow and one blue. '
-                            'Which colour do you choose?').lower()
+                            'Which colour do you choose?\n').lower()
             if choice3 == "yellow":
                 print("You Win!")
             elif choice3 == "red":
@@ -54,7 +54,7 @@ while play_again == "yes":
         print("You fell into a hole.\nGame Over")
     else:
         print("You chose a direction that does not exist.\nGame Over")
-    
-    play_again = input('\nWould you like to play again? Type "yes" or "no": ').lower()
+
+    play_again = input('\nWould you like to play again? Type "yes" or "no": \n').lower()
 
 print("\nThanks for playing! 🏴‍☠️")
