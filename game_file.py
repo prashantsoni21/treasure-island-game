@@ -50,3 +50,4 @@ elif choice1 == "right":
     print("You fell into a hole.\nGame Over")
 else:
     print("You chose a direction that does not exist.\nGame Over")
+input("\nPress Enter to exit...")
