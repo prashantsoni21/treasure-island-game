@@ -20,34 +20,41 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/______/
 *******************************************************************************
 ''')
-print("Welcome to Treasure Island.")
-print("Your mission is to find the treasure.")
-choice1 = input('''You're at a crossroad, where do you want to go?\nType "left" or "right".''').lower()
 
-if choice1 == "left":
-    # Continue in Game
-    choice2 = input('You\'ve come to a lake. There is an island in the middle of the lake. '
-                 'Type "wait" to wait for a boat. Type "swim" to swim across.').lower()
-    if choice2 == "wait":
-        # game will continue
-        choice3 = input('You arrive at the island unharmed. '
-                        'There is a house with 3 doors. '
-                        'One red, one yellow and one blue. '
-                        'Which colour do you choose?').lower()
-        if choice3 == "yellow":
-            print("You Win!")
-        elif choice3 == "red":
-            print("Burned by fire.\nGame Over")
-        elif choice3 == "blue":
-            print("Eaten by beasts\nGame Over")
+play_again = "yes"
+
+while play_again == "yes":
+    print("\nWelcome to Treasure Island.")
+    print("Your mission is to find the treasure.")
+    choice1 = input('''You're at a crossroad, where do you want to go?\nType "left" or "right".''').lower()
+
+    if choice1 == "left":
+        # Continue in Game
+        choice2 = input('You\'ve come to a lake. There is an island in the middle of the lake. '
+                     'Type "wait" to wait for a boat. Type "swim" to swim across.').lower()
+        if choice2 == "wait":
+            # game will continue
+            choice3 = input('You arrive at the island unharmed. '
+                            'There is a house with 3 doors. '
+                            'One red, one yellow and one blue. '
+                            'Which colour do you choose?').lower()
+            if choice3 == "yellow":
+                print("You Win!")
+            elif choice3 == "red":
+                print("Burned by fire.\nGame Over")
+            elif choice3 == "blue":
+                print("Eaten by beasts\nGame Over")
+            else:
+                print("You chose a door which doesn't exist.\nGame Over")
+        elif choice2 == "swim":
+            print("You got attacked by a hungry shark.\nGame Over")
         else:
-            print("You chose a door which doesn't exist.\nGame Over")
-    elif choice2 == "swim":
-        print("You got attacked by a hungry shark.\nGame Over")
+            print("I hear you but that option doesn't exist. Game Over")
+    elif choice1 == "right":
+        print("You fell into a hole.\nGame Over")
     else:
-        print("I hear you but that option doesn't exist. Game Over")
-elif choice1 == "right":
-    print("You fell into a hole.\nGame Over")
-else:
-    print("You chose a direction that does not exist.\nGame Over")
-input("\nPress Enter to exit...")
+        print("You chose a direction that does not exist.\nGame Over")
+    
+    play_again = input('\nWould you like to play again? Type "yes" or "no": ').lower()
+
+print("\nThanks for playing! 🏴‍☠️")
